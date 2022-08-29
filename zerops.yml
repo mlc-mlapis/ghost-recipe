@@ -1,5 +1,6 @@
 ghost:
   build:
+    base: [ nodejs@16 ]
     build:
       - cd ./versions/5.12.0 && yarn
     deploy: [ ./ ]
