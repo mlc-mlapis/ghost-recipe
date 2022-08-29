@@ -6,6 +6,7 @@ ghost:
   run:
     prepare:
       - npm install ghost-cli@latest -g
-      - adduser ghost
-      - usermod -aG sudo ghost
+    init:
+      - adduser ghost || exit 0
+      - usermod -aG sudo ghost || exit 0
     start: su - ghost && ghost start
