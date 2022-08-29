@@ -21,6 +21,7 @@
       "stdout"
     ]
   },
+  "process": "local",
   "paths": {
     "contentPath": "./content"
   }
