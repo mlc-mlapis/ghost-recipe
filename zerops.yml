@@ -9,6 +9,6 @@ ghost:
     init:
       - adduser --disabled-password --gecos "" ghost || exit 0
       - usermod -aG sudo ghost || exit 0
-      - sudo chown ghost:ghost ./
-      - sudo chmod 775 ./
+      - sudo chown -R ghost:ghost /var/www
+      - sudo chmod -R 775 /var/www
     start: sudo -u ghost ghost start
