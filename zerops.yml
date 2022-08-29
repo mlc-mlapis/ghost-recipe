@@ -9,4 +9,5 @@ ghost:
     init:
       - adduser --disabled-password --gecos "" ghost || exit 0
       - usermod -aG sudo ghost || exit 0
-    start: su - ghost && ghost start
+      - su - ghost
+    start: ghost start
