@@ -6,4 +6,4 @@ ghost:
   run:
     prepare:
       - npm install ghost-cli@latest -g
-    run: ghost start
+    start: ghost start
