@@ -22,7 +22,6 @@
       "stdout"
     ]
   },
-  "process": "local",
   "paths": {
     "contentPath": "/var/www/content"
   }
