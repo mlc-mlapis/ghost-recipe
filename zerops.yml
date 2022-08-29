@@ -1,0 +1,9 @@
+ghost:
+  build:
+    build:
+      - echo "nothing needed here"
+    deploy: [ ./ ]
+  run:
+    prepare:
+      - npm install ghost-cli@latest -g
+    run: ghost start
