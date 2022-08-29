@@ -7,6 +7,6 @@ ghost:
     prepare:
       - npm install ghost-cli@latest -g
     init:
-      - adduser ghost || exit 0
+      - adduser --disabled-password --gecos "" ghost || exit 0
       - usermod -aG sudo ghost || exit 0
     start: su - ghost && ghost start
