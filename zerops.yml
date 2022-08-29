@@ -11,5 +11,5 @@ ghost:
       - usermod -aG sudo ghost || exit 0
       - sudo chown -R ghost:ghost /var/www
       - sudo chmod -R 775 /var/www
-      - ln -s /var/www/current /var/www/versions/5.12.0
+      - ln -s /var/www/current /var/www/versions/5.12.0 || exit 0
     start: sudo -u ghost ghost start
