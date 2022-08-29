@@ -8,8 +8,8 @@ ghost:
     prepare:
       - npm install ghost-cli@latest -g
     init:
-      - adduser --disabled-password --gecos "" ghost || exit 0
-      - usermod -aG sudo ghost || exit 0
-      - sudo chown -R ghost:ghost /var/www
+      - adduser --disabled-password --gecos "" ghst || exit 0
+      - usermod -aG sudo ghst || exit 0
+      - sudo chown -R ghst:ghst /var/www
       - sudo chmod -R 775 /var/www
-    start: sudo -u ghost ghost run
+    start: sudo -u ghst ghost run
