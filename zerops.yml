@@ -13,4 +13,4 @@ ghost:
       - ln -s /var/www/versions/5.12.0 /var/www/current || exit 0
       - sudo chown -R ghost:ghost /var/www
       - sudo chmod -R 775 /var/www
-    start: sudo -u ghost ghost start
+    start: sudo -u ghost ghost run
