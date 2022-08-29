@@ -23,6 +23,6 @@
     ]
   },
   "paths": {
-    "contentPath": "/var/www/content"
+    "contentPath": "./content"
   }
 }
