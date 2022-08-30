@@ -1,17 +1,10 @@
 {
-  "url": "http://localhost:2368/",
   "server": {
     "port": 2368,
     "host": "0.0.0.0"
   },
   "database": {
-    "client": "mysql",
-    "connection": {
-      "host": "db",
-      "user": "db",
-      "password": "WuDaXnFgnAbF4xVM",
-      "database": "ghosttest_prod"
-    }
+    "client": "mysql"
   },
   "mail": {
     "transport": "Direct"
