@@ -6,9 +6,9 @@ ghost:
     deploy: [ ./ ]
   run:
     prepare:
-      - npm install ghost-cli@latest -g
-      - adduser --disabled-password --gecos "" ghst || exit 0
-      - usermod -aG sudo ghst || exit 0
+      - npm install -g ghost-cli@1.22.0
+      - adduser --disabled-password --gecos "" ghst
+      - usermod -aG sudo ghst
     init:
       - sudo chown -R ghst:ghst /var/www
       - sudo chmod -R 775 /var/www
