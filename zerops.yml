@@ -12,4 +12,4 @@ ghost:
     init:
       - sudo chown -R ghst:ghst /var/www
       - sudo chmod -R 775 /var/www
-    start: sudo -u ghst ghost run
+    start: su ghst -c "ghost run"
