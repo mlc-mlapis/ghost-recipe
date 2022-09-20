@@ -17,5 +17,8 @@
   "process": "local",
   "paths": {
     "contentPath": "./content"
-  }
+  },
+  "storage": {
+    "active": "s3"
+  }  
 }
