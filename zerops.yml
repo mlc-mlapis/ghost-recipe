@@ -2,10 +2,12 @@ ghost:
   build:
     base: [ nodejs@16 ]
     build:
-      - cd ./current && yarn 
-      - cd ./current && npm i ghost-storage-adapter-s3
-      - cd ./current && mkdir -p ./content/adapters/storage
-      - cd ./current && cp -r ./node_modules/ghost-storage-adapter-s3 ./content/adapters/storage/s3      
+      - | 
+      cd ./current
+      yarn
+      yarn add ghost-storage-adapter-s3
+      mkdir -p ./content/adapters/storage
+      cp -r ./node_modules/ghost-storage-adapter-s3 ./content/adapters/storage/s3
     deploy: [ ./ ]
   run:
     prepare:
