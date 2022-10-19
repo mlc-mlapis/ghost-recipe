@@ -7,7 +7,8 @@
     "client": "mysql"
   },
   "mail": {
-    "transport": "Direct"
+    "transport": "Direct",
+    "port": 1025
   },
   "logging": {
     "transports": [
