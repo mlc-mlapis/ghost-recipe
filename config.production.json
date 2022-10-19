@@ -9,7 +9,7 @@
   "mail": {
     "transport": "SMTP",
     "options": {
-      "host": "mailhog",
+      "host": "mailhog.zerops",
       "port": 1025
     }
   },
