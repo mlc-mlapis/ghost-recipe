@@ -7,8 +7,11 @@
     "client": "mysql"
   },
   "mail": {
-    "transport": "Direct",
-    "port": 1025
+    "transport": "SMTP",
+    "options": {
+      "host": "mailhog",
+      "port": 1025
+    }
   },
   "logging": {
     "transports": [
