@@ -13,7 +13,7 @@ ghost:
     deploy: [ ./ ]
   run:
     prepare:
-      - npm install -g ghost-cli@1.22.0
+      - npm install -g ghost-cli@1.23.1
       - adduser --disabled-password --gecos "" recipe
       - usermod -aG sudo recipe
       - zcli bucket s3 create $STORAGE_HOSTNAME $STORAGE_BUCKET_NAME --x-amz-acl=private

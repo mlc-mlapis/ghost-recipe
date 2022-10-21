@@ -1,1 +1,3 @@
-Ghost on Zerops
+# Recipe Ghost
+
+Zerops Ghost implementation.
