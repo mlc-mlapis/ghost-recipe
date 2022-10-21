@@ -14,10 +14,10 @@ ghost:
   run:
     prepare:
       - npm install -g ghost-cli@1.22.0
-      - adduser --disabled-password --gecos "" ghost
-      - usermod -aG sudo ghost
+      - adduser --disabled-password --gecos "" recipe
+      - usermod -aG sudo recipe
       - zcli bucket s3 create $STORAGE_HOSTNAME $STORAGE_BUCKET_NAME --x-amz-acl=private
     init:
-      - sudo chown -R ghost:ghost /var/www
+      - sudo chown -R recipe:recipe /var/www
       - sudo chmod -R 775 /var/www
-    start: su ghost -c "ghost run"
+    start: su recipe -c "ghost run"
