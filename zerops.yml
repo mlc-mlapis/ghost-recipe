@@ -1,8 +1,10 @@
 ghost:
   build:
-    base: [ nodejs@16 ]
+    base: [nodejs@16]
     build:
       - |
+        pwd
+        ls -la
         cd ./current
         yarn
         yarn add ghost-storage-adapter-s3
@@ -11,10 +13,11 @@ ghost:
     deploy: [ ./ ]
   run:
     prepare:
-      - npm install -g ghost-cli@1.22.0
-      - adduser --disabled-password --gecos "" ghst
-      - usermod -aG sudo ghst
+      - npm install -g ghost-cli@1.23.1
+      - adduser --disabled-password --gecos "" ghost
+      - usermod -aG sudo ghost
+      - zcli bucket s3 create $STORAGE_HOSTNAME $STORAGE_BUCKET_NAME --x-amz-acl=private
     init:
-      - sudo chown -R ghst:ghst /var/www
+      - sudo chown -R ghost:ghost /var/www
       - sudo chmod -R 775 /var/www
-    start: su ghst -c "ghost run"
+    start: su ghost -c "ghost run"
